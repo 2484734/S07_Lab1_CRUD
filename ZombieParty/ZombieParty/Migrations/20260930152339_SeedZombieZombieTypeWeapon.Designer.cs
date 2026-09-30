@@ -3,6 +3,7 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using ZombieParty.Models.Data;
 
@@ -11,9 +12,11 @@ using ZombieParty.Models.Data;
 namespace ZombieParty.Migrations
 {
     [DbContext(typeof(ZombiePartyDbContext))]
-    partial class ZombiePartyDbContextModelSnapshot : ModelSnapshot
+    [Migration("20260930152339_SeedZombieZombieTypeWeapon")]
+    partial class SeedZombieZombieTypeWeapon
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -123,18 +126,6 @@ namespace ZombieParty.Migrations
                             Price = 500m,
                             Qty = 30,
                             QtyBought = 1
-                        },
-                        new
-                        {
-                            WeaponId = 3,
-                            CreatedDate = new DateTime(1999, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            Description = "A Desert Eagle to kill zombies from long distance",
-                            Force = 500m,
-                            Image = "https://as1.ftcdn.net/jpg/04/25/69/32/1000_F_425693283_CCy2NlMXLhHbI0KbqLUvgeor2NCyPjSS.jpg",
-                            Name = "Desert Eagle",
-                            Price = 1000m,
-                            Qty = 10,
-                            QtyBought = 2
                         });
                 });
 
