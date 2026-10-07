@@ -13,6 +13,7 @@ namespace ZombieParty.Migrations
     [DbContext(typeof(ZombiePartyDbContext))]
     partial class ZombiePartyDbContextModelSnapshot : ModelSnapshot
     {
+
         protected override void BuildModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
